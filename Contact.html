@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <link href="contact.css" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="contact.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beautyconcept/Despre noi</title>
+</head>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="Salon.html">Acasa</a>
+  <a href="Programari.html">Programari</a>
+  <a href="Servicii.html">Servicii</a>
+  <a href="Preturi.html">Preturi</a>
+  <a href="Contact.html">Contact</a>
+</div>
+  
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Meniu</button>  
+  </div>
+  
+  <body>
+    
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Pagina noastra de facebook: Beautyconcept.fb</h2>
+      <h2 id="numar">Ne gasiti la adresa: Strada Washington nr  </h2>
+      <h2>Numar de telefon: 0726830245</h2>
+      <h2>E-mail: contact@beautyconcept.ro</h2>
+      
+    <section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="listing-hero">
+          <div class="hero-heading">
+              <div class="hero-large" style="">PROGRAMARI</div>
+              <div class="hero-text"> <i>Va rugam sa completati formularul cu numele complet, adresa de email si serviciul/serviciile pe care le doriti</i> </div>
+            </div>
+        </div>
+      
+      <div class="container-contact">
+          <div class="wrap-contact">
+      
+            <form action= "/user" method="GET" name= "form" action="" onsubmit="return validateForm()">
+      
+      
+              <div class="wrap-input validate-input" data-validate="Please enter your name">
+                <input class="input" type="text"  id="name"name="name" placeholder="Full Name">
+              </div>
+      
+              <div class="wrap-input validate-input" data-validate = "Please enter your email">
+                <input class="input" type="text"  id="email"name="email" placeholder="E-mail">
+              </div>
+      
+              <div class="wrap-input validate-input" data-validate = "Please enter your message">
+                <textarea class="input" type="text" id="message" name="message" placeholder="Your Message"></textarea>
+              </div>
+      
+              <div class="container-contact-form-btn">
+                <button type="submit" onclick="clickCounter()" value="Submit"class="contact-form-btn">
+                  <span>Send</span>
+                </button>
+              </div>
+      
+            </form>
+            <div id="result"></div>
+      
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      </div>
+      
+      </section>
+      
+      </body>
+      </html>

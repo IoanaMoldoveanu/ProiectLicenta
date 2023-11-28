@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="programari.css" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="programari.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beautyconcept/Despre noi</title>
+<style>
+    body {
+    background-image: url("emblema.jfif");
+    background-repeat: repeat-x;
+  }
+body {
+    background-color: lightblue;
+  }
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f8fdf8;
+  }
+  h2 {
+    letter-spacing: 5px;
+  }
+  h2{
+    font-family: "Lucida Handwriting", cursive;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:lightblue;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: lightblue;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(168, 166, 72);
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: rgb(168, 166, 72);
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+</style>
+</head>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="Salon.html">Acasa</a>
+    <a href="Programari.html">Programari</a>
+    <a href="Servicii.html">Servicii</a>
+    <a href="Preturi.html">Preturi</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Meniu</button>  
+  </div>
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="quiz">
+        <h1> Geocities quiz</h1>
+        <div id="questions">Are you ready to start the quiz?</div>
+        <ul id="answers">
+        </ul>
+        <div style="clear: both"></div>
+        <button id="button" class="button">Start quiz</button>
+      </div>
+      <div id="results">
+        <h1>Welcome to my site!!</h1>
+        <p><a>Link 1</a><a>Link 1</a><a>Link 1</a></p>
+        <p>Hi!! This is my website for all things <span id="topScore"></span>!!!!</p>
+        <div id="img1"></div>
+        <div id="img2"></div>
+        <div id="img3"></div>
+        <div style="clear:both;"></div>
+        <div id="affiliate1"></div>
+        <div id="affiliate2"></div>
+        <div id="affiliate3"></div>
+        <p><a href="javascript:window.location.href=window.location.href">Restart quiz</a></p>
+      </div>
+      <div id="error">
+        <p>There was an error. Please try again</p>
+      </div>
+  </body>
+</html>

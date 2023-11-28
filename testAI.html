@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link href="Desprenoi.css" rel="stylesheet" type="text/css" >
+    <script type="text/javascript" src="desprenoi.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beautyconcept/Despre noi</title>
+<style>
+.gender-button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.gender-button span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+
+  list-style: none;
+}
+
+
+</style>
+</head>
+<body>
+    <div>
+        <label class="gender-button">
+          <input type="radio" name="gender" value="male">
+          <span>Male</span>
+        </label>
+        <label class="gender-button">
+          <input type="radio" name="gender" value="female">
+          <span>Female</span>
+        </label>
+      </div>
+      
+      <script>
+      
+      var gender = null;
+      
+      document.querySelectorAll('input[name="gender"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          gender = this.value;
+          console.log('Gender selected:', gender);
+        });
+      });
+      </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beautyconcept/Despre noi</title>
+    <style>
+        .gender-button {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            
+        }
+        .gender-button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+        .gender-button span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            list-style: none;
+        }
+    </style>
+    <link href="Desprenoi.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="desprenoi.js"></script>
+</head>
+<body>
+    <div>
+        <label class="gender-button">
+            <input type="radio" name="gender" value="male">
+            <span>Male</span>
+        </label>
+        <label class="gender-button">
+            <input type="radio" name="gender" value="female">
+            <span>Female</span>
+        </label>
+    </div>
+    <button onclick="redirect()">Submit</button>
+      
+    <script>
+        var gender = null;
+        document.querySelectorAll('input[name="gender"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          gender = this.value;
+          console.log('Gender selected:', gender);
+        });
+      });
+      function redirect() {
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    if (gender === 'male') {
+      window.location.href = 'male.html';
+    } else if (gender === 'female') {
+      window.location.href = 'female.html';
+    }
+  }
+    </script>
+</body>
+</html>

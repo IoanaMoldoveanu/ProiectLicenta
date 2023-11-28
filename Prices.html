@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
+<style>
+     .menu {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+}
+
+   /* Style the dropdown button */
+	.dropbtn {
+		  background-color: white;
+		  color: black;
+		  padding: 16px;
+		  font-size: 16px;
+		  border: none;
+		  cursor: pointer;
+         
+	      
+		  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		  width: 50px;
+		  height: 50px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+          
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+		  position: absolute;
+		  display: inline-block;
+      top:5%;
+        
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+		  display: none;
+		  position: absolute;
+          top: 100%;
+          left: 0;
+		  z-index: 4;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  padding: 12px 16px;
+		  border-radius: 5px;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+          position: relative;
+          z-index: 4;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+		  display: block;
+	}
+
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {
+		  background-color: white;
+	}
+
+	/* Menu icon */
+	.dropbtn::before {
+		  content: "";
+		  display: block;
+		  width: 30px;
+		  height: 3px;
+		  background-color: black;
+		  margin: 0 auto;
+          top:3%;
+		  margin-top: -8px;
+	}
+
+	.dropbtn::after {
+		  content: "";
+		  display: block;
+          top:3%;
+		  width: 30px;
+		  height: 3px;
+		  background-color: black;
+		  margin: 0 auto;
+    }
+  body{
+    
+   background-color:transparent;
+   font-family: 'GFS Didot';
+
+  }
+    .navbar-container {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 0px;
+  font-family: 'GFS Didot';
+}
+
+.navbar-categories {
+  font-family: 'GFS Didot';
+display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 5px;
+  border-radius: 0px;
+  position: relative;
+  z-index: 2;
+ 
+}
+.navbar {
+  font-family: 'GFS Didot';
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+ 
+  padding: 20px;
+  z-index: 2;
+  
+}
+
+.navbar button {
+  font-family: 'GFS Didot';
+  position: relative;
+  z-index: 2;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 52.5px;
+  padding: 10px;
+  border-radius: 40px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.navbar button:hover {
+  font-family: 'GFS Didot';
+  background-color: white;
+  opacity: 0.8;
+  position: relative;
+          z-index: 2;
+}
+
+.price-list {
+  display: none;
+  margin-top: 20px;
+}
+
+.price-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  margin-bottom: 10px;
+}
+
+.price-list li span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+.show {
+  display: block;
+}
+#text-box{
+    position: absolute;
+    top: 110%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    background-color: rgba(255,255,255,0.5);
+    padding: 50px;
+  }
+</style>
+
+<!-- Add JavaScript to toggle the visibility of the price lists -->
+<script>
+function showPrices(category) {
+  var i;
+  var lists = document.getElementsByClassName("price-list");
+  for (i = 0; i < lists.length; i++) {
+    lists[i].style.display = "none";
+  }
+  document.getElementById(category).style.display = "block";
+}
+</script>
+
+</head>
+<body>
+  <img src="s1.jpg" style="position: absolute; top: 23%; left: 0; width: 100%; height: 150%; background-color: grey;">
+  <img src="llogo.png" style="position: absolute; top: 0; left: 67%; width: 30%; height: 22%; ">
+  <div class="dropdown">
+    <button class="dropbtn"></button>
+    <div class="dropdown-content">
+      <a href="Main.html">Home</a>
+      <a href="Prices.html">Preturi</a>
+      <a href="Programarii.html">Programari</a>
+      <a href="Contactt.html">Contact</a>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="navbar-container">
+    <div class="navbar-categories">
+<div class="navbar">
+  <button onclick="showPrices('category1')">Coafor</button>
+  <button onclick="showPrices('category2')">Cosmetica</button>
+  <button onclick="showPrices('category3')">Make-up</button>
+  <button onclick="showPrices('category4')">Tratamente corporale</button>
+  <button onclick="showPrices('category5')">Tratamente faciale</button>
+  <button onclick="showPrices('category6')">Masaj</button>
+  <button onclick="showPrices('category7')">Manichiura/pedichiura</button>
+</div>
+</div>
+</div>
+ 
+
+
+
+
+
+
+
+<!-- Add your pricing information here -->
+
+<div id="text-box">
+<div id="category1" class="price-list show">
+  <table>
+    <caption><h1>Coafor</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <tr>
+    <td>Spalat cu produse Wella</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td>Spalat cu produse L'Oreal</td>
+    <td>20</td>
+    </tr>
+    <tr>
+    <td>Tratament par lung cu MaroccanOil</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Tratament par scurt cu MaroccanOil</td>
+    <td>20</td>
+    </tr>
+    <tr>
+    <td>Tratament par lung cu Olaplex</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Tratament par scurt cu Olaplex</td>
+    <td>35</td>
+    </tr>
+    <tr>
+    <td>Tuns varfuri</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td>Tuns dama forma</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Tuns breton</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Spalat+coafat clasic par scurt</td>
+    <td>75</td>
+    </tr>
+    <tr>
+    <td>Spalat+coafat clasic par mediu</td>
+    <td>80</td>
+    </tr>
+    <tr>
+    <td>Spalat+coafat clasic par lung</td>
+    <td>90</td>
+    </tr>
+    <tr>
+    <td>Spalat+tuns+coafat clasic par scurt</td>
+    <td>85</td>
+    </tr>
+    <tr>
+    <td>Spalat+tuns+coafat clasic par mediu</td>
+    <td>90</td>
+    </tr>
+    <tr>
+    <td>Spalat+tuns+coafat clasic par lung</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Spalat+Coafat special</td>
+    <td>200</td>
+    </tr>
+    <tr>
+    <td>Spalat+Coafat mireasa</td>
+    <td>280</td>
+    </tr>
+    <tr>
+    <td>Impletituri simple</td>
+    <td>60</td>
+    </tr>
+    <tr>
+    <td>Impletituri speciale</td>
+    <td>110</td>
+    </tr>
+    <tr>
+    <td>Manopera vopsit par scurt</td>
+    <td>80</td>
+    </tr>
+    <tr>
+    <td>Manopera vopsit par mediu</td>
+    <td>95</td>
+    </tr>
+    <tr>
+    <td>Manopera vopsit par lung/foarte lug</td>
+    <td>120</td>
+    </tr>
+    <tr>
+    <td>Manopera decolorat par scurt</td>
+    <td>80</td>
+    </tr>
+    <tr>
+    <td>Manopera decolorat par mediu</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Manopera decolorat par lung/foarte lung</td>
+    <td>130</td>
+    </tr>
+    <tr>
+    <td>Balayage</td>
+    <td>300-500</td>
+    </tr>
+    <tr>
+    <td>Tub vopsea L'Oreal(60 g)</td>
+    <td>75</td>
+    </tr>
+    <tr>
+    <td>Tub vopsea Wella</td>
+    <td>90</td>
+    </tr>
+  </table>
+</div>
+
+<div id="category2" class="price-list">
+  <table>
+    <caption><h1>Cosmetica</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <tr>
+    <td>Epilat total</td>
+    <td>110</td>
+    </tr>
+    <tr>
+    <td>Epilat picioare lung</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Epilat picioare scurt</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Inghinal total</td>
+    <td>35</td>
+    </tr>
+    <tr>
+    <td>Epilat inghinal intim</td>
+    <td>20</td>
+    </tr>
+    <tr>
+    <td>Epilat brate</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Epilat fese</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Epilat axila</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Epilat mustață</td>
+    <td>10</td>
+    </tr>
+    <tr>
+    <td>Epilat facial</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td>Epilat abdomen</td>
+    <td>30</td>
+    </tr>
+    <td>Epilat total ceara zahar</td>
+    <td>110</td>
+    </tr>
+    <tr>
+    <td>Epilat picioare lung ceara zahar</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Epilat picioare scurt ceara zahar</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Inghinal total ceara zahar</td>
+    <td>35</td>
+    </tr>
+    <tr>
+    <td>Epilat inghinal intim ceara zahar</td>
+    <td>20</td>
+    </tr>
+    <tr>
+    <td>Epilat brate ceara zahar</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Epilat fese ceara zahar</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Epilat axila ceara zahar</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Epilat mustață ceara zahar</td>
+    <td>10</td>
+    </tr>
+    <tr>
+    <td>Epilat facial ceara zahar</td>
+    <td>25</td>
+    </tr>
+    <tr>
+    <td>Epilat abdomen ceara zahar</td>
+    <td>30</td>
+    </tr>
+    <tr>
+    <td>Pensat forma</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Laminat sparncene</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Vopsit sprancene</td>
+    <td>15</td>
+    </tr>
+    <tr>
+    <td>Vopsit gene</td>
+    <td>20</td>
+    </tr>
+    <tr>
+  </table>
+</div>
+
+<div id="category3" class="price-list">
+  <table>
+    <caption><h1>Make-up</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <td>Make-up de zi</td>
+    <td>80</td>
+    </tr>
+    <tr>
+    <td>Make=up de seara</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Make-up de nunta</td>
+    <td>200</td>
+    </tr>
+    <tr>
+    <td>Make-up de banchet</td>
+    <td>150</td>
+    </tr>
+    <tr>
+  </table>
+</div>
+<div id="category4" class="price-list">
+  <table>
+    <caption><h1>Tratamente corporale</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <td>1 zona: 10 min</td>
+    <td>150</td>
+    </tr>
+    <tr>
+    <td>1 zona: 20 min</td>
+    <td>200</td>
+    </tr>
+    <tr>
+    <td>2 zone: 20 min</td>
+    <td>300</td>
+    </tr>
+    <tr>
+    <td>2 zone: 40 min</td>
+    <td>400</td>
+    </tr>
+    <tr>
+        <td>3 zone: 30 min</td>
+        <td>420</td>
+    </tr>
+    <tr>
+        <td>3 zone: 60 min</td>
+        <td>600</td>
+    </tr>
+  </table>
+</div>
+<div id="category5" class="price-list">
+  <table>
+    <caption><h1>Tratamente faciale</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <td>Tratamnt extractie</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Microembraziune</td>
+    <td>150</td>
+    </tr>
+    <tr>
+    <td>Antiaging</td>
+    <td>250</td>
+    </tr>
+    <tr>
+    <td>Tratament pete</td>
+    <td>300</td>
+    </tr>
+  </table>
+</div>
+<div id="category6" class="price-list">
+  <table>
+    <caption><h1>Masaj</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <td>Masaj de relaxare 50 min</td>
+    <td>80</td>
+    </tr>
+    <tr>
+    <td>Abonament masaj relaxare 10 sedinte</td>
+    <td>700</td>
+    </tr>
+    <tr>
+    <td>Masaj anticelulitic 50 min(bambus si ventuze)</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Abonament masaj anticelulitic 10 sedinte(bambus si ventuze)</td>
+    <td>850</td>
+    </tr>
+    <td>Masaj anticelulitic 50 min(bambus)</td>
+    <td>90</td>
+    </tr>
+    <td>Abonament masaj anticelulitic 50 min(bambus)</td>
+    <td>800</td>
+    </tr>
+    <td>Masaj cu pietre vulcanice 60 min</td>
+    <td>120</td>
+    </tr>
+    <td>Masaj terapeutic 60 min</td>
+    <td>120</td>
+    </tr>
+    <td>Abonament masaj terapeutic 10 sedinte</td>
+    <td>950</td>
+    </tr>
+  </table>
+</div>
+<div id="category7" class="price-list">
+  <table>
+    <caption><h1>Manichiura/pedichiura</h1></caption>
+    <tr>
+    <th>Tip</th>
+    <th>Pret</th>
+    </tr>
+    <td>Manichiura oja simpla</td>
+    <td>45</td>
+    </tr>
+    <tr>
+    <td>Manichiura barbat</td>
+    <td>35</td>
+    </tr>
+    <tr>
+    <td>Manichiura oja semipermanenta</td>
+    <td>70</td>
+    </tr>
+    <tr>
+    <td>Constructie gel</td>
+    <td>120</td>
+    </tr>
+    <tr>
+    <td>Aplicat gel pe unghia naturala</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Intretinere gel</td>
+    <td>100</td>
+    </tr>
+    <tr>
+    <td>Dat jos oja semipermanenta</td>
+    <td>20</td>
+    </tr>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
